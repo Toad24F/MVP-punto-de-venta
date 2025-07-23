@@ -1,0 +1,1 @@
+Una aplicacion de punto de venta para negocios pequeños 
