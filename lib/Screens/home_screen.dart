@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:puntodeventa/Screens/product_screen.dart';
 import 'package:puntodeventa/Screens/sale_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -27,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
   // Lista de widgets para las diferentes pantallas/pestañas
   static const List<Widget> _widgetOptions = <Widget>[
     SalesScreen(),
-    PlaceholderScreen(title: 'Pantalla de Productos'),
+    ProductsScreen(),
     PlaceholderScreen(title: 'Pantalla de Historial de Ventas'),
   ];
 
