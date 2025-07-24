@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:puntodeventa/Screens/sale_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -25,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   // Lista de widgets para las diferentes pantallas/pestañas
   static const List<Widget> _widgetOptions = <Widget>[
-    PlaceholderScreen(title: 'Punto de Venta (Registrar Venta)'),
+    SalesScreen(),
     PlaceholderScreen(title: 'Pantalla de Productos'),
     PlaceholderScreen(title: 'Pantalla de Historial de Ventas'),
   ];
@@ -52,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         // El título del AppBar podría cambiar según la pestaña seleccionada
-        title: Text(_getTitleForIndex(_selectedIndex)),
+        title: Text("Hola, Adrian"),
       ),
       body: PageView(
         controller: _pageController,
@@ -81,19 +82,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // Método auxiliar para obtener el título basado en el índice
-  String _getTitleForIndex(int index) {
-    switch (index) {
-      case 0:
-        return 'Punto de Venta';
-      case 1:
-        return 'Productos';
-      case 2:
-        return 'Historial de Ventas';
-      default:
-        return 'Mi App';
-    }
-  }
 }
 
 // Widget Placeholder simple para cada pantalla
