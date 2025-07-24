@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:puntodeventa/Screens/history_sales_screen.dart';
 import 'package:puntodeventa/Screens/product_screen.dart';
 import 'package:puntodeventa/Screens/sale_screen.dart';
 
@@ -29,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
   static const List<Widget> _widgetOptions = <Widget>[
     SalesScreen(),
     ProductsScreen(),
-    PlaceholderScreen(title: 'Pantalla de Historial de Ventas'),
+    HistorySalesScreen(),
   ];
 
   void _onItemTapped(int index) {
