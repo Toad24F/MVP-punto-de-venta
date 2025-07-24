@@ -81,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen>
           final mediaQuery = MediaQuery.of(context);
           _backgroundExpansionAnimation =
               Tween<Size>(
-                begin: const Size(150, 50),
+                begin: const Size(120, 120),
                 end: Size(mediaQuery.size.width, mediaQuery.size.height),
               ).animate(
                 CurvedAnimation(
@@ -127,10 +127,10 @@ class _LoginScreenState extends State<LoginScreen>
                               ).colorScheme.inversePrimary,
                               borderRadius: BorderRadius.circular(
                                 lerpDouble(
-                                      30,
-                                      0,
-                                      _controller.value.clamp(0.3, 0.7),
-                                    ) ??
+                                  30,
+                                  0,
+                                  _controller.value.clamp(0.3, 0.7),
+                                ) ??
                                     0,
                               ),
                             ),
@@ -246,22 +246,25 @@ class _LoginScreenState extends State<LoginScreen>
                                   ),
                                   const SizedBox(width: 16),
                                   Expanded(
-                                    child: ElevatedButton(
-                                      onPressed: () {
-                                        Navigator.pushReplacement(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (_) => const HomeScreen(),
-                                          ),
-                                        );
-                                      },
-                                      style: ElevatedButton.styleFrom(
-                                        backgroundColor: Theme.of(
-                                          context,
-                                        ).colorScheme.primary,
-                                        foregroundColor: Colors.white,
+                                    child: Hero(
+                                      tag: 'loginButton', // Tag único para la animación
+                                      child: ElevatedButton(
+                                        onPressed: () {
+                                          Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (_) => const HomeScreen(),
+                                            ),
+                                          );
+                                        },
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: Theme.of(
+                                            context,
+                                          ).colorScheme.primary,
+                                          foregroundColor: Colors.white,
+                                        ),
+                                        child: const Text('Iniciar Sesión'),
                                       ),
-                                      child: const Text('Iniciar Sesión'),
                                     ),
                                   ),
                                 ],
