@@ -92,7 +92,7 @@ class _SalesScreenState extends State<SalesScreen> {
                     margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                     elevation: 2,
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(7.0),
                       child: Row(
                         children: [
                           Expanded(
@@ -103,7 +103,7 @@ class _SalesScreenState extends State<SalesScreen> {
                             ),
                           ),
                           Expanded(
-                            flex: 2,
+                            flex: 3,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
