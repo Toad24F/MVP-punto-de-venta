@@ -4,7 +4,8 @@ import 'package:puntodeventa/Screens/product_screen.dart';
 import 'package:puntodeventa/Screens/sale_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  final String? authToken;
+  const HomeScreen({super.key, this.authToken});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
