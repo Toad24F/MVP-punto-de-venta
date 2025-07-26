@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'Screens/login_screen.dart';
 
-void main() {
+Future<void> main() async {
+  // Asegura que los widgets de Flutter estén inicializados
+  WidgetsFlutterBinding.ensureInitialized();
+  // Carga las variables de entorno desde el archivo .env
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
